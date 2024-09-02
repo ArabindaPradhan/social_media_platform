@@ -6,8 +6,8 @@ Developing a niche social media platform with unique features like content curat
 
 <br>
 <h2>Technology Stack:</h2>
-- Backend: Python Django
-- Frontend: HTML, CSS
-- Database: MySQL
-- Real-time Features: Django Channels
-- Version Control: Git/GitHub
+- Backend: Python Django <br>
+- Frontend: HTML, CSS <br>
+- Database: MySQL <br>
+- Real-time Features: Django Channels <br>
+- Version Control: Git/GitHub <br>
