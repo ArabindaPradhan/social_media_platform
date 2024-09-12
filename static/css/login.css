@@ -105,8 +105,13 @@ a:hover {
 
 h3{
     color: #a3a3a3;
+    font-style: italic;
 }
-
+.i {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: rgb(90, 90, 90);
+}
 /* .left-side a{
     margin-left: 5rem;
 } */
