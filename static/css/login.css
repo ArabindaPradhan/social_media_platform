@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: end;
     align-items: center;
-    background-image: url("/html&css/images/logo-bg.jpg");
+    background-image: url("../images/logo-bg.jpg");
     background-repeat: no-repeat;
     background-size:contain;
 }

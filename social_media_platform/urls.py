@@ -19,7 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/', include('users.urls')),
-    path('', include('django.contrib.auth.urls')),  # This includes login, logout, and password management views
+    path('', include('users.urls'))
 ]
-
