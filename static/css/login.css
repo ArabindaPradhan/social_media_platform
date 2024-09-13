@@ -110,7 +110,15 @@ h3{
 .i {
     font-size: 5rem;
     margin-bottom: 1rem;
-    color: rgb(90, 90, 90);
+}
+i{
+    color: #ffc107;
+}
+#see {
+    font-size: 1.2rem;
+    position: absolute;
+    margin: .5rem;
+    margin-top: 1.1rem;
 }
 /* .left-side a{
     margin-left: 5rem;
