@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/msg.css">
+    <script src="https://kit.fontawesome.com/d9c78b6614.js" crossorigin="anonymous"></script>
+    <title>Instagram Clone</title>
+    <style>
+        /* Global Styles */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        /* Search Page */
+
+        .search-page {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .search-input {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        .search-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .search-btn:hover {
+            background-color: #3e8e41;
+        }
+
+        .search-results {
+            padding: 20px;
+        }
+
+        .search-result {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .search-result img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .result-info {
+            flex: 1;
+        }
+
+        .result-info h2 {
+            margin-top: 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .follow-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .follow-btn:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Our Header section Starts from here -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-links">
+                    <ul class="nav-group">
+                        <li class="nav-item">
+                            <a href="../templates/index.html">
+                                <i class="fas fa-home video"></i>
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a href="">
+                                <i class="fas fa-video video"></i>
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a href="../templates/connections.html">
+                                <i class="fas fa-users video"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="sta">
+                                <a href="../templates/msg.html">
+                                    <i class="fab fa-facebook-messenger msg"></i>
+                                </a>
+                                <div class="circle" style="border-radius: 50%;">7</div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="action">
+                                <div class="profile" onclick="menuToggle()">
+                                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093221/g2-200x200.jpg"
+                                        alt="user Avatar">
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a href="">
+                                <i class="fas fa-heart heart"></i>
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <div class="sta">
+                                <a href="../templates/notification.html">
+                                    <i class="fas fa-bell bell"></i>
+                                </a>
+                                <div class="circle" style="border-radius: 50%;">2</div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../templates/search.html">
+                                <i class="fas fa-search video"
+                                    style="background-color: rgb(21, 24, 204); color: white; padding: .5rem; border-radius: .5rem;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../templates/settings.html">
+                                <i class="fas fa-gear gear"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Code for Showing the Status -->
+    <main style="height: 80vh;">
+        <div class="container">
+            <!-- Search Page -->
+            <div class="search-page">
+                <header>
+                    <h1>Search</h1>
+                </header>
+                <form class="search-form">
+                    <input type="search" id="search-input" placeholder="Search for users, posts, or hashtags">
+                    <button class="search-btn">Search</button>
+                </form>
+                <div class="search-results">
+                    <!-- Search results will be displayed here -->
+                </div>
+            </div>
+
+            <!-- Search Result Template -->
+            <div class="search-result">
+                <img src="profile-picture.jpg" alt="Profile Picture">
+                <div class="result-info">
+                    <h2>User Name</h2>
+                    <p>Username: @username</p>
+                    <p>Bio: This is a sample bio</p>
+                </div>
+                <button class="follow-btn">Follow</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Get the search input and button elements
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
+        const searchResults = document.getElementById('search-results');
+
+        // Add an event listener to the search button
+        searchBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const searchTerm = searchInput.value.trim();
+            if (searchTerm !== '') {
+                // Make an API request to search for users, posts, or hashtags
+                fetch(`https://api.example.com/search?q=${searchTerm}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Display the search results
+                        searchResults.innerHTML = '';
+                        data.forEach(result => {
+                            const searchResultHTML = `
+            <div class="search-result">
+              <img src="${result.profile_picture}" alt="Profile Picture">
+              <div class="result-info">
+                <h2>${result.username}</h2>
+                <p>Username: @${result.username}</p>
+                <p>Bio: ${result.bio}</p>
+              </div>
+              <button class="follow-btn">Follow</button>
+            </div>
+          `;
+                            searchResults.innerHTML += searchResultHTML;
+                        });
+                    })
+                    .catch(error => console.error(error));
+            }
+        });
+    </script>
+</body>
+
+</html>

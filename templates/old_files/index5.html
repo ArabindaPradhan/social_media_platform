@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,78 +7,6 @@
     <script src="https://kit.fontawesome.com/d9c78b6614.js" crossorigin="anonymous"></script>
     <title>Instagram Clone</title>
     <script src="./post.js"></script>
-    <style>
-        
-        .search-form {
-            padding: 2px;
-        }
-        
-        #search-input {
-            border-radius: 7px;
-            width: 70%;
-            height: 40px;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-        }
-
-        .search-btn {
-            background-color: #1d92ff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .search-btn:hover {
-            background-color: #3e8e41;
-        }
-
-        .search-results {
-            padding: 20px;
-        }
-
-        .search-result {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .search-result img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-
-        .result-info {
-            flex: 1;
-        }
-
-        .result-info h2 {
-            margin-top: 0;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .follow-btn {
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .follow-btn:hover {
-            background-color: #3e8e41;
-        }
-        .d-none{
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -92,8 +19,7 @@
                     <ul class="nav-group">
                         <li class="nav-item">
                             <a href="../templates/index.html">
-                                <i class="fas fa-home"
-                                    style="background-color: rgb(21, 24, 204); color: white; padding: .5rem; border-radius: .5rem;"></i>
+                                <i class="fas fa-home" style="background-color: rgb(21, 24, 204); color: white; padding: .5rem; border-radius: .5rem;"></i>
                             </a>
                         </li>
                         <!-- <li class="nav-item">
@@ -101,6 +27,11 @@
                                 <i class="fas fa-video video"></i>
                             </a>
                         </li> -->
+                        <li class="nav-item">
+                            <a href="../templates/connections.html">
+                                <i class="fas fa-users video"></i>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <div class="sta">
                                 <a href="../templates/msg.html">
@@ -112,10 +43,8 @@
                         <li class="nav-item">
                             <div class="action">
                                 <div class="profile" onclick="menuToggle()">
-                                    <a href="../templates/profile.html">
-                                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093221/g2-200x200.jpg"
+                                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093221/g2-200x200.jpg"
                                         alt="user Avatar">
-                                    </a>
                                 </div>
                             </div>
                         </li>
@@ -133,11 +62,16 @@
                             </div>
                         </li>
                         <li class="nav-item">
+                            <a href="../templates/search.html">
+                                <i class="fas fa-search video"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="../templates/settings.html">
                                 <i class="fas fa-gear gear"></i>
                             </a>
                         </li>
-
+                        
                     </ul>
                 </div>
             </div>
@@ -147,168 +81,14 @@
     <!-- Code for Showing the Status -->
     <main>
         <div class="container">
-
-            <div class="col-3">
-                <div class="card">
-                    <div class="search_btn">
-                        <!-- Search Page -->
-                        <div class="search-page">
-                            <form class="search-form">
-                                <input type="search" id="search-input" placeholder="Search for users, posts, or hashtags">
-                                <button class="search-btn">Search</button>
-                              </form>
-                              <div class="search-results">
-                                <!-- Search results will be displayed here -->
-                              </div>
-                        </div>
-
-                        <!-- Search Result Template -->
-                        <div class="search-result d-none">
-                            <img src="profile-picture.jpg" alt="Profile Picture">
-                            <div class="result-info">
-                                <h2>User Name</h2>
-                                <p>Username: @username</p>
-                                <p>Bio: This is a sample bio</p>
-                            </div>
-                            <button class="follow-btn">Follow</button>
-                        </div>
-                    </div>
-                    <h4>Suggestions For You</h4>
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="sta">
-                                <div class="profilepic">
-                                    <div class="profile_img on">
-                                        <div class="image">
-                                            <img src="../static/images/redbull.jpg" alt="img12">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div class="circle" style="background: rgb(73, 255, 73);"></div> -->
-                            </div>
-                            <h3>redbull
-                                <i class="fas fa-certificate" style="color: blue;font-size: 13px;"></i><br>
-                                <span>Followed by _Bikramaditya</span>
-                            </h3>
-                        </div>
-                        <div>
-                            <a href="#" class="follow">follow
-                            </a>
-                        </div>
-                    </div>
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="sta">
-                                <div class="profilepic">
-                                    <div class="profile_img">
-                                        <div class="image">
-                                            <img src="../static/images/a_p.jpg" alt="img12">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div class="circle" style="background: rgb(73, 255, 73);"></div> -->
-                            </div>
-                            <h3>Arabinda_Pradhan_<br>
-                                <span>Follows You</span>
-                            </h3>
-                        </div>
-                        <div>
-                            <a href="#" class="follow">follow
-                            </a>
-                        </div>
-                    </div>
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="sta">
-                                <div class="profilepic">
-                                    <div class="profile_img">
-                                        <div class="image">
-                                            <img src="../static/images/susi.png" alt="img13">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="circle" style="background: transparent; border: none;"></div>
-                            </div>
-                            <h3>_Sushant___03<br>
-                                <span>Follows You</span>
-                            </h3>
-                        </div>
-                        <div>
-                            <a href="#" class="follow">follow back
-                            </a>
-                        </div>
-                    </div>
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="sta">
-                                <div class="profilepic">
-                                    <div class="profile_img on">
-                                        <div class="image">
-                                            <img src="../static/images/logo.png" alt="img14">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div class="circle" style="background: rgb(73, 255, 73);"></div> -->
-                            </div>
-                            <h3>_._raquel_.07<br>
-                                <span>Followed by suprava_3567</span>
-                            </h3>
-                        </div>
-                        <div>
-                            <a href="#" class="follow">follow</a>
-                        </div>
-                    </div>
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="sta">
-                                <div class="profilepic">
-                                    <div class="profile_img">
-                                        <div class="image">
-                                            <img src="../static/images/shakti.png" alt="img15">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div class="circle" style="background: rgb(73, 255, 73);"></div> -->
-                            </div>
-                            <h3>shaktibhusan_20<br>
-                                <span>Follows You</span>
-                            </h3>
-                        </div>
-                        <div>
-                            <a href="#" class="follow">follow
-                            </a>
-                        </div>
-                    </div>
-                    <div class="top">
-                        <div class="userDetails">
-                            <div class="sta">
-                                <div class="profilepic">
-                                    <div class="profile_img on">
-                                        <div class="image">
-                                            <img src="../static/images/pragyan.png" alt="img16" class="cover">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div class="circle" style="background: rgb(73, 255, 73);"></div> -->
-                            </div>
-                            <h3>iampragnyaa<br>
-                                <span>Followed by __.a.n.j.u.m__</span>
-                            </h3>
-                        </div>
-                        <div>
-                            <a href="#" class="follow">follow
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <a href="#">see more</a>
-            </div>
+        
             <div class="col-9">
                 <div class="statuses">
                     <div class="sta">
                         <div class="status" style="background: none;">
                             <div class="image">
-                                <img src="../static/images/a_p.jpg" alt="img3">
+                                <img src="../static/images/a_p.jpg"
+                                    alt="img3">
                             </div>
                         </div>
                         <div class="circle">
@@ -319,7 +99,8 @@
                     <div class="sta">
                         <div class="status on">
                             <div class="image">
-                                <img src="../static/images/logo.png" alt="img3">
+                                <img src="../static/images/logo.png"
+                                    alt="img3">
                             </div>
                         </div>
                         <div class="circle">
@@ -329,7 +110,8 @@
                     <div class="sta">
                         <div class="status">
                             <div class="image">
-                                <img src="../static/images/shakti.png" alt="img4">
+                                <img src="../static/images/shakti.png"
+                                alt="img4">
                             </div>
                         </div>
                         <div class="circle">
@@ -339,7 +121,8 @@
                     <div class="sta">
                         <div class="status on">
                             <div class="image">
-                                <img src="../static/images/pragyan.png" alt="img5">
+                                <img src="../static/images/pragyan.png"
+                                alt="img5">
                             </div>
                         </div>
                         <div class="circle">
@@ -349,7 +132,8 @@
                     <div class="sta">
                         <div class="status on">
                             <div class="image">
-                                <img src="../static/images/logo.png" alt="img6">
+                                <img src="../static/images/logo.png"
+                                alt="img6">
                             </div>
                         </div>
                         <div class="circle">
@@ -359,7 +143,8 @@
                     <div class="sta">
                         <div class="status">
                             <div class="image">
-                                <img src="../static/images/susi.png" alt="img7">
+                                <img src="../static/images/susi.png"
+                                alt="img7">
                             </div>
                         </div>
                         <div class="circle">
@@ -369,7 +154,8 @@
                     <div class="sta">
                         <div class="status on">
                             <div class="image">
-                                <img src="../static/images/logo.png" alt="img8">
+                                <img src="../static/images/logo.png"
+                                alt="img8">
                             </div>
                         </div>
                         <div class="circle">
@@ -379,23 +165,80 @@
                     <div class="sta">
                         <div class="status on">
                             <div class="image">
-                                <img src="../static/images/logo.png" alt="img3">
+                                <img src="../static/images/logo.png"
+                                    alt="img3">
                             </div>
                         </div>
                         <div class="circle">
                             _raquel_
                         </div>
                     </div>
+                    <div class="sta">
+                        <div class="status">
+                            <div class="image">
+                                <img src="../static/images/shakti.png"
+                                alt="img4">
+                            </div>
+                        </div>
+                        <div class="circle">
+                            shakti
+                        </div>
+                    </div>
+                    <div class="sta">
+                        <div class="status on">
+                            <div class="image">
+                                <img src="../static/images/pragyan.png"
+                                alt="img5">
+                            </div>
+                        </div>
+                        <div class="circle">
+                            pragyan
+                        </div>
+                    </div>
+                    <div class="sta">
+                        <div class="status on">
+                            <div class="image">
+                                <img src="../static/images/logo.png"
+                                alt="img6">
+                            </div>
+                        </div>
+                        <div class="circle">
+                            a.n.j.u.m
+                        </div>
+                    </div>
+                    <div class="sta">
+                        <div class="status">
+                            <div class="image">
+                                <img src="../static/images/susi.png"
+                                alt="img7">
+                            </div>
+                        </div>
+                        <div class="circle">
+                            _Sushant_
+                        </div>
+                    </div>
+                    <div class="sta">
+                        <div class="status on">
+                            <div class="image">
+                                <img src="../static/images/logo.png"
+                                alt="img8">
+                            </div>
+                        </div>
+                        <div class="circle">
+                            suprava
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Code for viewing the Post -->
                 <div class="card">
-
+                    
                     <div class="new_style">
                         <div class="imgBx">
-                            <img src="../static/images/child-817371_1920.jpg" alt="post-1" class="cover">
+                            <img src="../static/images/child-817371_1920.jpg"
+                                alt="post-1" class="cover">
                         </div>
-
+                        
                         <div class="bottom">
                             <div class="caption">
                                 <div>
@@ -405,15 +248,8 @@
                                         <p class="location"><i class="fas fa-map-location"></i> PURI </p>
                                     </div>
                                 </div>
-                                <p class="quote">“The ocean stirs the heart, inspires the imagination, and brings
-                                    eternal joy to the soul. Its waves hold the whispers of our dreams and the secrets
-                                    of our deepest desires. As the sun sets over the horizon and the sky is painted with
-                                    hues of gold and pink, we are reminded that every day brings a new chance to chase
-                                    our passions and embrace the beauty around us. Let the waves wash away your worries,
-                                    and let the sand beneath your feet ground you in the present moment.” 🌊🌅✨</p>
-                                <p class="hashtags message"> <span>#BeachVibes #SeaSide #OceanViews #SunAndSand
-                                        #BeachDay #SaltLife #WaveChaser #SummerEscape #CoastalLiving #BeachBliss</span>
-                                </p>
+                                <p class="quote">“The ocean stirs the heart, inspires the imagination, and brings eternal joy to the soul. Its waves hold the whispers of our dreams and the secrets of our deepest desires. As the sun sets over the horizon and the sky is painted with hues of gold and pink, we are reminded that every day brings a new chance to chase our passions and embrace the beauty around us. Let the waves wash away your worries, and let the sand beneath your feet ground you in the present moment.” 🌊🌅✨</p>
+                                <p class="hashtags message"> <span>#BeachVibes #SeaSide #OceanViews #SunAndSand #BeachDay #SaltLife #WaveChaser #SummerEscape #CoastalLiving #BeachBliss</span></p>
                             </div>
                             <div class="top">
                                 <div class="userDetails">
@@ -421,7 +257,8 @@
                                         <div class="sta">
                                             <div class="profile_img">
                                                 <div class="image">
-                                                    <img src="../static/images/shakti.png" alt="img8">
+                                                    <img src="../static/images/shakti.png"
+                                                        alt="img8">
                                                 </div>
                                             </div>
                                         </div>
@@ -435,7 +272,7 @@
                             <div class="action">
                                 <div>
                                     <a href="#"></a>
-                                    <h5 class="postTime">2 hours ago</h5>
+                                        <h5 class="postTime">2 hours ago</h5>
                                     </a>
                                 </div>
                                 <div class="actionBtns">
@@ -451,7 +288,7 @@
                                         <i class="fas fa-share"></i>
                                         <p class="likes">7 shares</p>
                                     </a>
-
+                                    
                                 </div>
                             </div>
                             <div class="addComments">
@@ -467,12 +304,13 @@
                     </div>
                 </div>
                 <div class="card">
-
+                    
                     <div class="new_style">
                         <div class="imgBx">
-                            <img src="../static/images/children-1822704_1920.jpg" alt="post-1" class="cover">
+                            <img src="../static/images/children-1822704_1920.jpg"
+                                alt="post-1" class="cover">
                         </div>
-
+                        
                         <div class="bottom">
                             <div class="caption">
                                 <div>
@@ -482,15 +320,8 @@
                                         <p class="location"><i class="fas fa-map-location"></i> PURI </p>
                                     </div>
                                 </div>
-                                <p class="quote">“The ocean stirs the heart, inspires the imagination, and brings
-                                    eternal joy to the soul. Its waves hold the whispers of our dreams and the secrets
-                                    of our deepest desires. As the sun sets over the horizon and the sky is painted with
-                                    hues of gold and pink, we are reminded that every day brings a new chance to chase
-                                    our passions and embrace the beauty around us. Let the waves wash away your worries,
-                                    and let the sand beneath your feet ground you in the present moment.” 🌊🌅✨</p>
-                                <p class="hashtags message"> <span>#BeachVibes #SeaSide #OceanViews #SunAndSand
-                                        #BeachDay #SaltLife #WaveChaser #SummerEscape #CoastalLiving #BeachBliss</span>
-                                </p>
+                                <p class="quote">“The ocean stirs the heart, inspires the imagination, and brings eternal joy to the soul. Its waves hold the whispers of our dreams and the secrets of our deepest desires. As the sun sets over the horizon and the sky is painted with hues of gold and pink, we are reminded that every day brings a new chance to chase our passions and embrace the beauty around us. Let the waves wash away your worries, and let the sand beneath your feet ground you in the present moment.” 🌊🌅✨</p>
+                                <p class="hashtags message"> <span>#BeachVibes #SeaSide #OceanViews #SunAndSand #BeachDay #SaltLife #WaveChaser #SummerEscape #CoastalLiving #BeachBliss</span></p>
                             </div>
                             <div class="top">
                                 <div class="userDetails">
@@ -498,7 +329,8 @@
                                         <div class="sta">
                                             <div class="profile_img on">
                                                 <div class="image">
-                                                    <img src="../static/images/logo.png" alt="img8">
+                                                    <img src="../static/images/logo.png"
+                                                        alt="img8">
                                                 </div>
                                             </div>
                                         </div>
@@ -512,7 +344,7 @@
                             <div class="action">
                                 <div>
                                     <a href="#"></a>
-                                    <h5 class="postTime">2 hours ago</h5>
+                                        <h5 class="postTime">2 hours ago</h5>
                                     </a>
                                 </div>
                                 <div class="actionBtns">
@@ -528,7 +360,7 @@
                                         <i class="fas fa-share"></i>
                                         <p class="likes">7 shares</p>
                                     </a>
-
+                                    
                                 </div>
                             </div>
                             <div class="addComments">
@@ -544,12 +376,13 @@
                     </div>
                 </div>
                 <div class="card">
-
+                    
                     <div class="new_style">
                         <div class="imgBx">
-                            <img src="../static/images/children-593313_1920.jpg" alt="post-1" class="cover">
+                            <img src="../static/images/children-593313_1920.jpg"
+                                alt="post-1" class="cover">
                         </div>
-
+                        
                         <div class="bottom">
                             <div class="caption">
                                 <div>
@@ -559,15 +392,8 @@
                                         <p class="location"><i class="fas fa-map-location"></i> PURI </p>
                                     </div>
                                 </div>
-                                <p class="quote">“The ocean stirs the heart, inspires the imagination, and brings
-                                    eternal joy to the soul. Its waves hold the whispers of our dreams and the secrets
-                                    of our deepest desires. As the sun sets over the horizon and the sky is painted with
-                                    hues of gold and pink, we are reminded that every day brings a new chance to chase
-                                    our passions and embrace the beauty around us. Let the waves wash away your worries,
-                                    and let the sand beneath your feet ground you in the present moment.” 🌊🌅✨</p>
-                                <p class="hashtags message"> <span>#BeachVibes #SeaSide #OceanViews #SunAndSand
-                                        #BeachDay #SaltLife #WaveChaser #SummerEscape #CoastalLiving #BeachBliss</span>
-                                </p>
+                                <p class="quote">“The ocean stirs the heart, inspires the imagination, and brings eternal joy to the soul. Its waves hold the whispers of our dreams and the secrets of our deepest desires. As the sun sets over the horizon and the sky is painted with hues of gold and pink, we are reminded that every day brings a new chance to chase our passions and embrace the beauty around us. Let the waves wash away your worries, and let the sand beneath your feet ground you in the present moment.” 🌊🌅✨</p>
+                                <p class="hashtags message"> <span>#BeachVibes #SeaSide #OceanViews #SunAndSand #BeachDay #SaltLife #WaveChaser #SummerEscape #CoastalLiving #BeachBliss</span></p>
                             </div>
                             <div class="top">
                                 <div class="userDetails">
@@ -575,7 +401,8 @@
                                         <div class="sta">
                                             <div class="profile_img">
                                                 <div class="image">
-                                                    <img src="../static/images/susi.png" alt="img8">
+                                                    <img src="../static/images/susi.png"
+                                                        alt="img8">
                                                 </div>
                                             </div>
                                         </div>
@@ -589,7 +416,7 @@
                             <div class="action">
                                 <div>
                                     <a href="#"></a>
-                                    <h5 class="postTime">2 hours ago</h5>
+                                        <h5 class="postTime">2 hours ago</h5>
                                     </a>
                                 </div>
                                 <div class="actionBtns">
@@ -605,7 +432,7 @@
                                         <i class="fas fa-share"></i>
                                         <p class="likes">7 shares</p>
                                     </a>
-
+                                    
                                 </div>
                             </div>
                             <div class="addComments">

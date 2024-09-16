@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/msg.css">
+    <script src="https://kit.fontawesome.com/d9c78b6614.js" crossorigin="anonymous"></script>
+    <title>FAQ</title>
+    <style>
+        h1, h2 {
+    color: #333;
+}
+
+h2 {
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Our Header section Starts from here -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-links">
+                    <ul class="nav-group">
+                        <li class="nav-item">
+                            <a href="../templates/index.html">
+                                <i class="fas fa-home video"></i>
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a href="">
+                                <i class="fas fa-video video"></i>
+                            </a>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                            <a href="../templates/connections.html">
+                                <i class="fas fa-users video"></i>
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <div class="sta">
+                                <a href="../templates/msg.html">
+                                    <i class="fab fa-facebook-messenger msg"></i>
+                                </a>
+                                <div class="circle" style="border-radius: 50%;">7</div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="action">
+                                <div class="profile" onclick="menuToggle()">
+                                    <a href="../templates/profile.html">
+                                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093221/g2-200x200.jpg"
+                                            alt="user Avatar">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a href="">
+                                <i class="fas fa-heart heart"></i>
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <div class="sta">
+                                <a href="../templates/notification.html">
+                                    <i class="fas fa-bell bell"></i>
+                                </a>
+                                <div class="circle" style="border-radius: 50%;">2</div>
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a href="../templates/search.html">
+                                <i class="fas fa-search video"></i>
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a href="../templates/settings.html">
+                                <i class="fas fa-gear gear"
+                                    style="background-color: rgb(21, 24, 204); color: white; padding: .5rem; border-radius: .5rem;"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Code for Showing the Status -->
+    <main style="height: 80vh;">
+        <div class="container">
+            <section id="help-intro">
+                <h1>Help Center</h1>
+                <p>Welcome to the Help Center. Here you can find answers to common questions, access our support resources, and contact our support team for assistance.</p>
+            </section>
+    
+            <section id="help-resources">
+                <h2>Helpful Resources</h2>
+                <ul>
+                    <li><a href="https://example.com/tutorials" target="_blank">Tutorials</a> - Learn how to use our platform with step-by-step guides.</li>
+                    <li><a href="https://example.com/knowledge-base" target="_blank">Knowledge Base</a> - Browse articles and documentation for detailed information.</li>
+                    <li><a href="https://example.com/community" target="_blank">Community Forums</a> - Connect with other users and share your experiences.</li>
+                </ul>
+            </section>
+    
+            <section id="contact-support">
+                <h2>Contact Support</h2>
+                <p>If you need further assistance, you can reach our support team through the following methods:</p>
+                <ul>
+                    <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    <li>Email: <a href="mailto:support@example.com">support@example.com</a></li>
+                    <li>Live Chat: <a href="https://example.com/live-chat" target="_blank">Start a live chat</a></li>
+                </ul>
+            </section>
+    
+            <section id="submit-request">
+                <h2>Submit a Request</h2>
+                <p>If you have a specific issue or question that needs attention, please submit a request using the form below:</p>
+                <form id="support-request-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit">Submit Request</button>
+                </form>
+            </section>
+        </div>
+    </main>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const supportRequestForm = document.getElementById('support-request-form');
+    supportRequestForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Your support request has been submitted successfully!');
+        supportRequestForm.reset(); // Optional: Reset form fields after submission
+    });
+});
+
+</script>
+</body>
+
+</html>
